@@ -8,7 +8,7 @@
 2. Copy the contents to the plugin folder.
 
 ## What do you need first
-Sparkliner create graph with JSON data. First your need have it. It looks like that:
+Sparkliner creates graph with JSON data. First your need have it. It looks like that:
 
 ``` json
 {
