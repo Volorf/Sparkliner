@@ -1,0 +1,9 @@
+{
+  "dataArray": [10, 30, 3, 8, 39, 25, 22, 89, 74, 7, 2, 40, 61, 17, 35, 31, 8, 13, 49, 39, 52, 15, 3, 9, 21, 73, 64, 36, 29, 11, 34],
+  "strokeColor": "#00AAFF",
+  "thickness": 1,
+  "displayEndPoint": true,
+  "endPointColor": "#DD2020",
+  "endPointRadius": 2,
+  "removeInitialBox": true
+}

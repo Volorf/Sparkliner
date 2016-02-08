@@ -1,0 +1,25 @@
+{
+  "name": "Sparkliner",
+  "description": "Plugins to create sparkline graph",
+  "author": "Oleg Frolov",
+  "homepage": "http://github.com/example/sketchplugins",
+  "version": 1.0,
+  "identifier": "com.example.sketch.shape-plugins",
+  "updateURL": "https://github.com/downloads/example/sketchplugins/sketchplugins.json",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Create",
+      "identifier": "create",
+      "shortcut": "ctrl shift g",
+      "script": "sparkliner.js",
+      "handler": "createGraph"
+    }
+  ],
+  "menu": {
+    "items": [
+      "create"
+    ]
+  }
+}
