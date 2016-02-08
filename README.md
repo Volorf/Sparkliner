@@ -47,7 +47,7 @@ Radius of end marker. Only one number.
 It is start rectangle who set sizes of sparkline graph. By default plugin removes it. If need it you can set false.
 
 ##How does it work
-- Create artboard;
-- Create a start rectangle. It sets sizes of a future sparkline graph.
-- Start command from menu or press shortcuts ctrl + shift + s
-- Get result.
+1. Create artboard;
+2. Create a start rectangle. It sets sizes of a future sparkline graph.
+3. Start command from menu or press shortcuts ctrl + shift + s
+4. Get result.
