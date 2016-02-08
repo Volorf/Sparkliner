@@ -48,6 +48,6 @@ It is start rectangle who set sizes of sparkline graph. By default plugin remove
 
 ##How does it work
 1. Create artboard;
-2. Create a start rectangle. It sets sizes of a future sparkline graph.
-3. Start command from menu or press shortcuts ctrl + shift + g
+2. Create a start rectangle. It sets sizes of a future sparkline graph;
+3. Start command from menu or press shortcuts ``` ctrl + shift + g ```;
 4. Get result.
