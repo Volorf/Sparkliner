@@ -1,4 +1,5 @@
 # Sparkliner — easy way to make sparkline graph
+A sparkline is a very small line chart. Basicaly it doesn't have any axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way. [Learn more here](https://en.wikipedia.org/wiki/Sparkline).
 
 ## What will you get
 ![Sparkline is ready](/sparkline-example.png)
