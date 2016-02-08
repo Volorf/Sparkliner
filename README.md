@@ -1,5 +1,5 @@
 # Sparkliner — easy way to make sparkline graph
-A sparkline is a very small line chart. Basicaly it doesn't have any axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way. [Learn more here](https://en.wikipedia.org/wiki/Sparkline).
+A sparkline is a very small line chart. Basicaly it doesn't have any axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way. [Learn more about it](https://en.wikipedia.org/wiki/Sparkline).
 
 ## What will you get
 ![Sparkline is ready](/sparkline-example.png)
@@ -13,7 +13,7 @@ Sparkliner creates graph with JSON data. First your need have it. It looks like 
 
 ``` json
 {
-  "dataArray": [10, 30, 3, 8, 39, 25, 22],
+  "dataArray": [10, 30, 3, 8, 39, 25, 22, 89, 74, 7, 2, 40, 61, 17, 35, 31, 8, 14, 39, 32, 53],
   "strokeColor": "#00AAFF",
   "thickness": 1,
   "displayEndPoint": true,
@@ -26,7 +26,7 @@ Sparkliner creates graph with JSON data. First your need have it. It looks like 
 The data is in file called example.json (in the plugin folder).
 
 ``` "dataArray" ```
-It's that what we will make a sparkline. Data is int's array. Only numbers.
+It's that of what we will make a sparkline. Data is an array. Only numbers.
 
 ``` "strokeColor" ```
 Color of sparkline. You need to write HEX color here. Don't forget about "quotes".
@@ -35,7 +35,7 @@ Color of sparkline. You need to write HEX color here. Don't forget about "quotes
 Thickness of line. Only one number.
 
 ``` "displayEndPoint" ```
-If you it equel true sparkline is made with a end marker. It it equel false that is not.
+If it equals true sparkline is made with an end marker. If it equals false - it is not.
 
 ``` "endPointColor" ```
 Color of end marker. It need a HEX.
