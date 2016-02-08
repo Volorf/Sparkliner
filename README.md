@@ -5,7 +5,7 @@
 
 ## How install the plugin
 1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip)
-2. Unzip the contents to the plugin folder.
+2. Copy the contents to the plugin folder.
 
 ## What do you need first
 Sparkliner create graph with JSON data. First your need have it. It looks like that:
