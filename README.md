@@ -24,25 +24,25 @@ Sparkliner create graph with JSON data. First your need have it. It looks like t
 
 The data is in file called example.json (in the plugin folder).
 
-- "dataArray"
+``` "dataArray" ```
 It's that what we will make a sparkline. Data is int's array. Only numbers.
 
-- "strokeColor"
+``` "strokeColor" ```
 Color of sparkline. You need to write HEX color here. Don't forget about "quotes".
 
-- "thickness"
+``` "thickness" ```
 Thickness of line. Only one number.
 
-- "displayEndPoint"
+``` "displayEndPoint" ```
 If you it equel true sparkline is made with a end marker. It it equel false that is not.
 
-- "endPointColor"
+``` "endPointColor" ```
 Color of end marker. It need a HEX.
 
-- "endPointRadius"
+``` "endPointRadius" ```
 Radius of end marker. Only one number.
 
-- "removeInitialBox"
+``` "removeInitialBox" ```
 It is start rectangle who set sizes of sparkline graph. By default plugin removes it. If need it you can set false.
 
 ##How does it work
