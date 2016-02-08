@@ -9,6 +9,7 @@ Detailed instruction you will find here.
 ## What do you need first
 Sparkliner create graph with JSON data. First your need have it. It looks like that:
 
+``` json
 {
   "dataArray": [10, 30, 3, 8, 39, 25, 22],
   "strokeColor": "#00AAFF",
@@ -18,6 +19,7 @@ Sparkliner create graph with JSON data. First your need have it. It looks like t
   "endPointRadius": 2,
   "removeInitialBox": true
 }
+```
 
 The data is in file called example.json (in the plugin folder).
 
