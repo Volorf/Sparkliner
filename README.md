@@ -3,8 +3,9 @@
 ## What will you get
 ![Sparkline is ready](/sparkline-example.png)
 
-## How instal the plugin
-Detailed instruction you will find here.
+## How install the plugin
+1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip)
+2. Unzip the contents to the plugin folder.
 
 ## What do you need first
 Sparkliner create graph with JSON data. First your need have it. It looks like that:
