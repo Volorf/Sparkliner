@@ -1,7 +1,7 @@
 # Sparkliner — easy way to make sparkline graph
 
 ## What will you get
-[Sparkline is ready](./sparkline-example.png)
+![Sparkline is ready](/sparkline-example.png)
 
 ## How instal the plugin
 Detailed instruction you will find here.
