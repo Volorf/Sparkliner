@@ -8,6 +8,14 @@ var selectedLayers = context.selection;
 var selectedCount = selectedLayers.count();
 var doc = context.document;
 
+
+// Check data a bit
+
+@import "checkdata.js"
+
+
+// Create sparkline
+
 var box = selectedLayers[0]
 var daysAmount = dataArray.length;
 
