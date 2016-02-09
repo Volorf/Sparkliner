@@ -52,3 +52,6 @@ It is start rectangle that set sizes of sparkline graph. By default plugin remov
 3. Start command from menu or press shortcuts `ctrl + shift + g `;
 4. Find and import your JSON file;
 5. Get sparkline.
+
+##Gif more than thousand words
+![Gif more than thousand words](/how-to.gif)
