@@ -25,6 +25,8 @@ Sparkliner creates graph with JSON data. First your need have it. It looks like 
 ```
 Open the file in your favorite editor and change the values of the names how you need (e.g. `"strokeColor" ` is a name. `"#00AAFF"` is its a value. Together they are a pair). Or create new one.
 
+## What are they
+
 ``` "dataArray" ```
 Data is an array. It defines a graph curve. Only numbers.
 
