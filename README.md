@@ -38,13 +38,13 @@ Thickness of line. Only one number.
 If it equals true sparkline is made with an end marker. If it equals false - it is not.
 
 ``` "endPointColor" ```
-Color of end marker. It need a HEX.
+Color of end marker. It needs a HEX.
 
 ``` "endPointRadius" ```
 Radius of end marker. Only one number.
 
 ``` "removeInitialBox" ```
-It is start rectangle that set sizes of sparkline graph. By default plugin removes it. If need it you can set false.
+It is start rectangle that set sizes of sparkline graph. By default plugin removes it. If you need it you can set false.
 
 ##How does it work
 1. Create an artboard;
