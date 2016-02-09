@@ -1,15 +1,16 @@
 # Sparkliner — easy way to make sparkline graph
-A sparkline is a very small line chart. Basicaly it doesn't have any axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way. [Learn more about it](https://en.wikipedia.org/wiki/Sparkline).
+> A sparkline is a very small line chart, typically drawn without axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way.
+> - [Wikipedia](https://en.wikipedia.org/wiki/Sparkline).
 
 ## What will you get
-![Sparkline is ready](/sparkline-example.png)
+![This is sparkline](/sparkline-example.png)
 
 ## How install the plugin
-1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip)
+1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
 2. Copy the contents to the plugin folder.
 
 ## What do you need first
-Sparkliner creates graph with JSON data. First your need have it. It looks like that:
+Sparkliner creates graph with JSON data. First your need have it. It looks like that (example.json):
 
 ``` json
 {
@@ -22,11 +23,10 @@ Sparkliner creates graph with JSON data. First your need have it. It looks like 
   "removeInitialBox": true
 }
 ```
-
-The data is in file called example.json (in the plugin folder).
+Open the file in your favorite editor and change the values of the names how you need (e.g. `"strokeColor" ` is a name. `"#00AAFF"` is its a value. Together they are a pair). Or create new one.
 
 ``` "dataArray" ```
-It's that of what we will make a sparkline. Data is an array. Only numbers.
+Data is an array. It defines a graph curve. Only numbers.
 
 ``` "strokeColor" ```
 Color of sparkline. You need to write HEX color here. Don't forget about "quotes".
@@ -44,10 +44,11 @@ Color of end marker. It need a HEX.
 Radius of end marker. Only one number.
 
 ``` "removeInitialBox" ```
-It is start rectangle who set sizes of sparkline graph. By default plugin removes it. If need it you can set false.
+It is start rectangle that set sizes of sparkline graph. By default plugin removes it. If need it you can set false.
 
 ##How does it work
-1. Create artboard;
+1. Create an artboard;
 2. Create a start rectangle. It sets sizes of a future sparkline graph;
-3. Start command from menu or press shortcuts ``` ctrl + shift + g ```;
-4. Get result.
+3. Start command from menu or press shortcuts `ctrl + shift + g `;
+4. Find and import your JSON file;
+5. Get sparkline.
