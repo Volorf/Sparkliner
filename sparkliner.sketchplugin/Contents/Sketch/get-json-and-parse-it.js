@@ -8,7 +8,6 @@ var openPanelButtonPressed = openPanel.runModal()
 
 if (openPanelButtonPressed == NSFileHandlingPanelOKButton) {
       var allowedUrl = openPanel.URL()
-		log(allowedUrl)
     }
 
 var filePath = allowedUrl

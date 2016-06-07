@@ -4,9 +4,9 @@
   "author": "Oleg Frolov",
   "authorEmail": "frolololeg@gmail.com",
   "homepage": "https://github.com/Volorf/Sparkliner",
-  "version": 1.0,
+  "version": 1.0.1,
   "identifier": "com.example.sketch.sparkliner",
-  "compatibleVersion": 3,
+  "compatibleVersion": 3.6,
   "bundleVersion": 1,
   "commands": [
     {

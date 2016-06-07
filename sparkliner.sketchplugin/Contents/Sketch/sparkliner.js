@@ -13,7 +13,6 @@ var doc = context.document;
 
 @import "checkdata.js"
 
-
 // Create sparkline
 
 var box = selectedLayers[0]
