@@ -1,6 +1,7 @@
 var someThingWentWrong = 0
 var msg = "Wrong data type:"
 
+
 // Check gata
 
 var checkDataArray = 0

@@ -1,84 +1,80 @@
 @import "get-json-and-parse-it.js"
 
-
 function createGraph(context) {
 
+	var selectedLayers = context.selection;
+	var selectedCount = selectedLayers.count();
+	var doc = context.document;
 
-var selectedLayers = context.selection;
-var selectedCount = selectedLayers.count();
-var doc = context.document;
+	// Check data a bit
+	// @import "checkdata.js"
 
+	// Create sparkline
 
-// Check data a bit
+	var box = selectedLayers[0];
+	var daysAmount = dataArray.length;
 
-@import "checkdata.js"
+	if (selectedCount == 1) {
 
-// Create sparkline
+		var boxWidth = box.frame().width();
+		var boxHeight = box.frame().height();
+  	var boxX = box.frame().x();
+  	var boxY = box.frame().y();
 
-var box = selectedLayers[0]
-var daysAmount = dataArray.length;
+		// Define width of one column
+		var dotOffset = boxWidth / (daysAmount - 1);
 
-var path = NSBezierPath.bezierPath();
+		// Find max value in array
+		var maxValueInArray = Math.max.apply(Math, dataArray);
 
+		// Define relevant unit for the box
+		var relevantUnit = boxHeight / maxValueInArray;
 
-if (selectedCount == 1) {
+  	var dotY = 0;
+  	var dotX = 0;
 
-	var boxWidth = box.frame().width()
-	var boxHeight = box.frame().height()
-  var boxX = box.frame().x()
-  var boxY = box.frame().y()
+		var endPoint = dataArray.length - 1;
 
-	// Define width of one column
-	var dotOffset = boxWidth / (daysAmount - 1)
+  	var path = NSBezierPath.bezierPath();
 
-	// Find max value in array
-	var maxValueInArray = Math.max.apply(Math, dataArray)
+		// doc.showMessage(path.toString());
 
-	// Define relevant unit for the box
-	var relevantUnit = boxHeight / maxValueInArray
+    path.moveToPoint(NSMakePoint(0,0));
 
-  var dotY = 0
-  var dotX = 0
+		for (var i = 0; i < dataArray.length; i++) {
+    	dotX = dotOffset * i;
+    	dotY = boxHeight - dataArray[i] * relevantUnit;
+    	if (i == 0) {
+    		path.moveToPoint(NSMakePoint(dotX,dotY));
+    	}
+    	path.lineToPoint(NSMakePoint(dotX,dotY));
 
-	var endPoint = dataArray.length - 1
+			// Create end markpoint
+			if (i == endPoint) {
 
-  var path = NSBezierPath.bezierPath();
+				var ovalShape = MSOvalShape.alloc().init();
+				ovalShape.frame = MSRect.rectWithRect(NSMakeRect(0,0,(endPointRadius * 2),(endPointRadius * 2)));
 
-    path.moveToPoint(NSMakePoint(0,0))
+				var shapeGroup = MSShapeGroup.shapeWithPath(ovalShape);
+				// Changed layer.style().fills().addNewStylePart() to layer.style().addStylePartOfType(0) for Sketch 3.8
+				var fill = shapeGroup.style().addStylePartOfType(0);
+				fill.color = MSColor.colorWithSVGString(endPointColor);
+				shapeGroup.frame().midX = dotX + boxX;
+				shapeGroup.frame().midY = dotY + boxY;
 
-	 for (var i = 0; i < dataArray.length; i++) {
-     dotX = dotOffset * i
-     dotY = boxHeight - dataArray[i] * relevantUnit
-     if (i == 0) {
-       path.moveToPoint(NSMakePoint(dotX,dotY));
-     }
-     path.lineToPoint(NSMakePoint(dotX,dotY));
-
-		 // Create end markpoint
-		 	if (i == endPoint) {
-
-			 var ovalShape = MSOvalShape.alloc().init();
-			 ovalShape.frame = MSRect.rectWithRect(NSMakeRect(0,0,(endPointRadius * 2),(endPointRadius * 2)));
-
-			 var shapeGroup = MSShapeGroup.shapeWithPath(ovalShape);
-			 var fill = shapeGroup.style().fills().addNewStylePart();
-			 fill.color = MSColor.colorWithSVGString(endPointColor);
-			 shapeGroup.frame().midX = dotX + boxX
-			 shapeGroup.frame().midY = dotY + boxY
-
-		 	}
+			}
 
     }
 
-  // path.closePath();
 
   var shape = MSShapeGroup.shapeWithBezierPath(path);
-  var border = shape.style().borders().addNewStylePart();
+	// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
+  var border = shape.style().addStylePartOfType(1);
   border.color = MSColor.colorWithSVGString(strokeColor);
-  border.thickness = thickness
+  border.thickness = thickness;
 
-	shape.frame().x = boxX
-	shape.frame().y = boxY
+	shape.frame().x = boxX;
+	shape.frame().y = boxY;
 
   // Add graph to current artboard
   doc.currentPage().currentArtboard().addLayers([shape]);
@@ -88,12 +84,11 @@ if (selectedCount == 1) {
 
   // Remove initial box
   if (removeInitialBox == true) {
-    doc.currentPage().currentArtboard().removeLayer(box)
+    doc.currentPage().currentArtboard().removeLayer(box);
   }
 
 } else {
-	var doc = context.document
-  doc.showMessage("You should select one rectangle.")
+  doc.showMessage("You should select one rectangle.");
 }
 
 }
