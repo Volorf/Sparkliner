@@ -27,8 +27,14 @@ function createGraph(context) {
 		// Find max value in array
 		var maxValueInArray = Math.max.apply(Math, dataArray);
 
+		// Find min value in array
+		var minValueInArray = Math.min.apply(Math, dataArray);
+
+
+		var deltaValueInArray = maxValueInArray - minValueInArray
+
 		// Define relevant unit for the box
-		var relevantUnit = boxHeight / maxValueInArray;
+		var relevantUnit = boxHeight / deltaValueInArray;
 
   	var dotY = 0;
   	var dotX = 0;
@@ -37,7 +43,7 @@ function createGraph(context) {
 
   	var path = NSBezierPath.bezierPath();
 
-		// doc.showMessage(path.toString());
+		// doc.showMessage(minValueInArray.toString());
 
     path.moveToPoint(NSMakePoint(0,0));
 
