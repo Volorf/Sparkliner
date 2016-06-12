@@ -30,8 +30,8 @@ function createGraph(context) {
 		// Find min value in array
 		var minValueInArray = Math.min.apply(Math, dataArray);
 
-
-		var deltaValueInArray = maxValueInArray - minValueInArray
+		// Find delta of values in array
+ 		var deltaValueInArray = maxValueInArray - minValueInArray
 
 		// Define relevant unit for the box
 		var relevantUnit = boxHeight / deltaValueInArray;
@@ -49,7 +49,7 @@ function createGraph(context) {
 
 		for (var i = 0; i < dataArray.length; i++) {
     	dotX = dotOffset * i;
-    	dotY = boxHeight - dataArray[i] * relevantUnit;
+    	dotY =  - (dataArray[i] - minValueInArray) * relevantUnit;
     	if (i == 0) {
     		path.moveToPoint(NSMakePoint(dotX,dotY));
     	}
@@ -66,35 +66,33 @@ function createGraph(context) {
 				var fill = shapeGroup.style().addStylePartOfType(0);
 				fill.color = MSColor.colorWithSVGString(endPointColor);
 				shapeGroup.frame().midX = dotX + boxX;
-				shapeGroup.frame().midY = dotY + boxY;
+				shapeGroup.frame().midY = dotY + boxY + boxHeight;
 
 			}
 
     }
 
+		var shape = MSShapeGroup.shapeWithBezierPath(path);
+		// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
+		var border = shape.style().addStylePartOfType(1);
+		border.color = MSColor.colorWithSVGString(strokeColor);
+		border.thickness = thickness;
 
-  var shape = MSShapeGroup.shapeWithBezierPath(path);
-	// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
-  var border = shape.style().addStylePartOfType(1);
-  border.color = MSColor.colorWithSVGString(strokeColor);
-  border.thickness = thickness;
+		shape.frame().x = boxX;
+		shape.frame().y = boxY;
 
-	shape.frame().x = boxX;
-	shape.frame().y = boxY;
+		// Add graph to current artboard
+		doc.currentPage().currentArtboard().addLayers([shape]);
+		if (displayEndPoint == true) {
+			doc.currentPage().currentArtboard().addLayers([shapeGroup]);
+		}
 
-  // Add graph to current artboard
-  doc.currentPage().currentArtboard().addLayers([shape]);
-	if (displayEndPoint == true) {
-		doc.currentPage().currentArtboard().addLayers([shapeGroup]);
-	}
+		// Remove initial box
+		if (removeInitialBox == true) {
+  		doc.currentPage().currentArtboard().removeLayer(box);
+		}
 
-  // Remove initial box
-  if (removeInitialBox == true) {
-    doc.currentPage().currentArtboard().removeLayer(box);
-  }
-
-} else {
-  doc.showMessage("You should select one rectangle.");
-}
-
+	} else {
+			doc.showMessage("You should select one rectangle.");
+		}
 }
