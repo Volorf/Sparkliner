@@ -2,8 +2,15 @@
 > A sparkline is a very small line chart, typically drawn without axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way.
 > - [Wikipedia](https://en.wikipedia.org/wiki/Sparkline).
 
-## What will you get
-![This is sparkline](/sparkline-example.png)
+## How it works
+![Gif more than thousand words](/how-to.gif)
+
+##Order
+1. **Create an artboard**;
+2. Create a start rectangle. It sets sizes of a future sparkline graph;
+3. Start command from menu or press shortcuts `ctrl + shift + g `;
+4. Find and import your JSON file;
+5. Get sparkline.
 
 ## How install the plugin
 1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
@@ -47,13 +54,3 @@ Radius of end marker. Only one number.
 
 ``` "removeInitialBox" ```
 It is start rectangle that set sizes of sparkline graph. By default plugin removes it. If you need it you can set false.
-
-##How does it work
-1. **Create an artboard**;
-2. Create a start rectangle. It sets sizes of a future sparkline graph;
-3. Start command from menu or press shortcuts `ctrl + shift + g `;
-4. Find and import your JSON file;
-5. Get sparkline.
-
-##Gif more than thousand words
-![Gif more than thousand words](/how-to.gif)
