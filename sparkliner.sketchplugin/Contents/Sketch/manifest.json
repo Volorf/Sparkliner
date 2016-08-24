@@ -10,16 +10,25 @@
   "bundleVersion": 2,
   "commands": [
     {
-      "name": "Create",
-      "identifier": "create",
+      "name": "Upload JSON",
+      "identifier": "createWithJson",
       "shortcut": "ctrl shift g",
       "script": "sparkliner.js",
-      "handler": "createGraph"
+      "handler": "createWithJson"
+    },
+    {
+      "name": "Enter data",
+      "identifier": "enterData",
+      "shortcut": "ctrl shift e",
+      "script": "sparkliner.js",
+      "handler": "enterData"
     }
   ],
   "menu": {
     "items": [
-      "create"
+      "createWithJson",
+      "enterData"
+
     ]
   }
 }
