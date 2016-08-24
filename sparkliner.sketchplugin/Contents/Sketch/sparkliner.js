@@ -112,9 +112,7 @@ function enterData(context) {
 
 	var dataFromTextFieldArray = doc.askForUserInput_initialValue("Enter your data", "")
 
-	var deepHackTheString = dataFromTextFieldArray.replace(/ /g, ", ");
-
-	var dataArray = deepHackTheString.trim().split(", ").map(Number)
+	var dataArray = dataFromTextFieldArray.trim().split(", ").map(Number)
 
 	// Check data a bit
 	// @import "checkdata.js"
