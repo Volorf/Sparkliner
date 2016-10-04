@@ -190,14 +190,14 @@ function enterData(context) {
 		shape.frame().y = boxY;
 
 		// Add graph to current artboard
-		doc.currentPage().addLayers([shape]);
+		doc.currentPage().currentArtboard().addLayers([shape]);
 		if (displayEndPoint == true) {
-			doc.currentPage().addLayers([shapeGroup]);
+			doc.currentPage().currentArtboard().addLayers([shapeGroup]);
 		}
 
 		// Remove initial box
 		if (removeInitialBox == true) {
-  		doc.currentPage().removeLayer(box);
+  		doc.currentPage().currentArtboard().removeLayer(box);
 		}
 
 	} else {

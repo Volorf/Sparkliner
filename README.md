@@ -6,10 +6,11 @@
 ![Gif more than thousand words](/how-to.gif)
 
 ##Order
-1. Create a start rectangle. It sets sizes of a future sparkline graph;
-2. Start command from menu or press shortcuts `ctrl + shift + g `;
-3. Find and import your JSON file or enter your data;
-4. Get sparkline.
+1. **Create an artboard**;
+2. Create a start rectangle. It sets sizes of a future sparkline graph;
+3. Start command from menu or press shortcuts `ctrl + shift + g `;
+4. Find and import your JSON file;
+5. Get sparkline.
 
 ## How install the plugin
 1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
