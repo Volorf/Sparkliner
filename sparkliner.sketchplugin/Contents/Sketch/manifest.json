@@ -22,13 +22,19 @@
       "shortcut": "ctrl shift e",
       "script": "sparkliner.js",
       "handler": "enterData"
+    },
+    {
+      "name": "Random Data",
+      "identifier": "randomData",
+      "script": "sparkliner.js",
+      "handler": "randomData"
     }
   ],
   "menu": {
     "items": [
       "createWithJson",
-      "enterData"
-
+      "enterData",
+      "randomData"
     ]
   }
 }
