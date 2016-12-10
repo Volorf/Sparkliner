@@ -4,9 +4,9 @@
   "author": "Oleg Frolov",
   "authorEmail": "frolololeg@gmail.com",
   "homepage": "https://github.com/Volorf/Sparkliner",
-  "version": 1.5,
+  "version": 1.7,
   "identifier": "com.example.sketch.sparkliner",
-  "compatibleVersion": 3.8,
+  "compatibleVersion": 41.2,
   "bundleVersion": 2,
   "commands": [
     {
@@ -22,13 +22,19 @@
       "shortcut": "ctrl shift e",
       "script": "sparkliner.js",
       "handler": "enterData"
+    },
+    {
+      "name": "Random Data",
+      "identifier": "randomData",
+      "script": "sparkliner.js",
+      "handler": "randomData"
     }
   ],
   "menu": {
     "items": [
       "createWithJson",
-      "enterData"
-
+      "enterData",
+      "randomData"
     ]
   }
 }
