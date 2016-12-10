@@ -14,10 +14,12 @@ var filePath = allowedUrl
 
 var data = JSON.parse(NSString.stringWithContentsOfFile(filePath))
 
-var dataArray = data.dataArray
-var strokeColor = data.strokeColor
-var thickness = data.thickness
-var displayEndPoint = data.displayEndPoint
-var endPointColor = data.endPointColor
-var endPointRadius = data.endPointRadius
-var removeInitialBox = data.removeInitialBox
+var options = {
+  dataArray: data.dataArray,
+  strokeColor: data.strokeColor,
+  thickness: data.thickness,
+  displayEndPoint: data.displayEndPoint,
+  endPointColor: data.endPointColor,
+  endPointRadius: data.endPointRadius,
+  removeInitialBox: data.removeInitialBox
+}
