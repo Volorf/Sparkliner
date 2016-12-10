@@ -1,3 +1,7 @@
+function makeColor(SVGString) {
+    return MSImmutableColor.colorWithSVGString(SVGString).newMutableCounterpart();
+}
+
 function createWithJson(context) {
 
 	@import "get-json-and-parse-it.js"
@@ -64,7 +68,7 @@ function createWithJson(context) {
 				var shapeGroup = MSShapeGroup.shapeWithPath(ovalShape);
 				// Changed layer.style().fills().addNewStylePart() to layer.style().addStylePartOfType(0) for Sketch 3.8
 				var fill = shapeGroup.style().addStylePartOfType(0);
-				fill.color = MSColor.colorWithSVGString(endPointColor);
+				fill.color = makeColor(endPointColor);
 				shapeGroup.frame().midX = dotX + boxX;
 				shapeGroup.frame().midY = dotY + boxY + boxHeight;
 
@@ -75,7 +79,7 @@ function createWithJson(context) {
 		var shape = MSShapeGroup.shapeWithBezierPath(path);
 		// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
 		var border = shape.style().addStylePartOfType(1);
-		border.color = MSColor.colorWithSVGString(strokeColor);
+		border.color = makeColor(strokeColor);
 		border.thickness = thickness;
 
 		shape.frame().x = boxX;
@@ -172,7 +176,7 @@ function enterData(context) {
 				var shapeGroup = MSShapeGroup.shapeWithPath(ovalShape);
 				// Changed layer.style().fills().addNewStylePart() to layer.style().addStylePartOfType(0) for Sketch 3.8
 				var fill = shapeGroup.style().addStylePartOfType(0);
-				fill.color = MSColor.colorWithSVGString(endPointColor);
+				fill.color = makeColor(endPointColor);
 				shapeGroup.frame().midX = dotX + boxX;
 				shapeGroup.frame().midY = dotY + boxY + boxHeight;
 
@@ -183,7 +187,7 @@ function enterData(context) {
 		var shape = MSShapeGroup.shapeWithBezierPath(path);
 		// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
 		var border = shape.style().addStylePartOfType(1);
-		border.color = MSColor.colorWithSVGString(strokeColor);
+		border.color = makeColor(strokeColor);
 		border.thickness = thickness;
 
 		shape.frame().x = boxX;
