@@ -7,7 +7,7 @@ var defaults = {
   removeInitialBox: true
 };
 
-/**
+/*
  * Create a color from an SVG string
  * @method makeColor
  * @param  {String}  SVGString
@@ -16,7 +16,7 @@ function makeColor(SVGString) {
   return MSImmutableColor.colorWithSVGString(SVGString).newMutableCounterpart();
 }
 
-/**
+/*
  * Generate the sparkline
  * @method generateSparkline
  * @param  {Object} context [description]
@@ -117,7 +117,7 @@ function generateSparkline(context, options) {
 
 }
 
-/**
+/*
  * Create a sparkline from JSON
  * @method createWithJson
  * @param  {Object} context
@@ -129,7 +129,7 @@ function createWithJson(context) {
 	generateSparkline(context, options);
 }
 
-/**
+/*
  * Create a sparkline from user-inputted data
  * @method enterData
  * @param  {Object} context
@@ -147,7 +147,7 @@ function enterData(context) {
   generateSparkline(context, options);
 }
 
-/**
+/*
  * Create a sparkline from random data
  * @method randomData
  * @param  {Object} context
