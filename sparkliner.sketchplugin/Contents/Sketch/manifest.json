@@ -27,6 +27,7 @@
       "name": "Random Data",
       "identifier": "randomData",
       "script": "sparkliner.js",
+      "shortcut": "ctrl shift r",
       "handler": "randomData"
     }
   ],
