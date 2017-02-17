@@ -24,6 +24,13 @@
       "handler": "randomData"
     },
     {
+      "name": "Random Data N",
+      "identifier": "randomDataN",
+      "script": "sparkliner.js",
+      "shortcut": "ctrl shift n",
+      "handler": "randomDataN"
+    },
+    {
       "name": "Upload JSON",
       "identifier": "createWithJson",
       "shortcut": "ctrl shift g",
@@ -35,6 +42,7 @@
     "items": [
       "enterData",
       "randomData",
+      "randomDataN",
       "createWithJson"
     ]
   }
