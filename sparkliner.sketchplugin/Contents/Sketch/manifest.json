@@ -10,13 +10,6 @@
   "bundleVersion": 2,
   "commands": [
     {
-      "name": "Upload JSON",
-      "identifier": "createWithJson",
-      "shortcut": "ctrl shift g",
-      "script": "sparkliner.js",
-      "handler": "createWithJson"
-    },
-    {
       "name": "Enter data",
       "identifier": "enterData",
       "shortcut": "ctrl shift e",
@@ -29,13 +22,20 @@
       "script": "sparkliner.js",
       "shortcut": "ctrl shift r",
       "handler": "randomData"
+    },
+    {
+      "name": "Upload JSON",
+      "identifier": "createWithJson",
+      "shortcut": "ctrl shift g",
+      "script": "sparkliner.js",
+      "handler": "createWithJson"
     }
   ],
   "menu": {
     "items": [
-      "createWithJson",
       "enterData",
-      "randomData"
+      "randomData",
+      "createWithJson"
     ]
   }
 }
