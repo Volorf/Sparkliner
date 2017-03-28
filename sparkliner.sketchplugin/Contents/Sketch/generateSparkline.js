@@ -1,0 +1,94 @@
+function generateSparkline(context, options) {
+
+  if (!options || typeof options !== 'object') options = defaults;
+
+  var selectedLayers = context.selection;
+	var selectedCount = selectedLayers.count();
+	var doc = context.document;
+
+	var box = selectedLayers[0];
+	var daysAmount = options.dataArray.length;
+
+	if (selectedCount == 1) {
+
+		var boxWidth = box.frame().width();
+		var boxHeight = box.frame().height();
+  	var boxX = box.frame().x();
+  	var boxY = box.frame().y();
+
+		// Define width of one column
+		var dotOffset = boxWidth / (daysAmount - 1);
+
+		// Find max value in array
+		var maxValueInArray = Math.max.apply(Math, options.dataArray);
+
+		// Find min value in array
+		var minValueInArray = Math.min.apply(Math, options.dataArray);
+
+		// Find delta of values in array
+ 		var deltaValueInArray = maxValueInArray - minValueInArray;
+
+		// Define relevant unit for the box
+		var relevantUnit = boxHeight / deltaValueInArray;
+
+  	var dotY = 0;
+  	var dotX = 0;
+
+		var endPoint = options.dataArray.length - 1;
+
+  	var path = NSBezierPath.bezierPath();
+
+		// doc.showMessage(minValueInArray.toString());
+
+    path.moveToPoint(NSMakePoint(0,0));
+
+		for (var i = 0; i < options.dataArray.length; i++) {
+    	dotX = dotOffset * i;
+    	dotY =  - (options.dataArray[i] - minValueInArray) * relevantUnit;
+    	if (i == 0) {
+    		path.moveToPoint(NSMakePoint(dotX,dotY));
+    	};
+    	path.lineToPoint(NSMakePoint(dotX,dotY));
+
+			// Create end markpoint
+			if (i == endPoint) {
+
+				var ovalShape = MSOvalShape.alloc().init();
+				ovalShape.frame = MSRect.rectWithRect(NSMakeRect(0,0,(options.endPointRadius * 2),(options.endPointRadius * 2)));
+
+				var shapeGroup = MSShapeGroup.shapeWithPath(ovalShape);
+				// Changed layer.style().fills().addNewStylePart() to layer.style().addStylePartOfType(0) for Sketch 3.8
+				var fill = shapeGroup.style().addStylePartOfType(0);
+				fill.color = makeColor(options.endPointColor);
+				shapeGroup.frame().midX = dotX + boxX;
+				shapeGroup.frame().midY = dotY + boxY + boxHeight;
+
+			};
+
+    };
+
+		var shape = MSShapeGroup.shapeWithBezierPath(path);
+		// Changed layer.style().borders().addNewStylePart() to style().addStylePartOfType(1) for Sketch 3.8
+		var border = shape.style().addStylePartOfType(1);
+		border.color = makeColor(options.strokeColor);
+		border.thickness = options.thickness;
+
+		shape.frame().x = boxX;
+		shape.frame().y = boxY;
+
+		// Add graph to current artboard
+		doc.currentPage().currentArtboard().addLayers([shape]);
+		if (options.displayEndPoint == true) {
+			doc.currentPage().currentArtboard().addLayers([shapeGroup]);
+		}
+
+		// Remove initial box
+		if (options.removeInitialBox == true) {
+  		doc.currentPage().currentArtboard().removeLayer(box);
+		}
+
+	} else {
+		doc.showMessage("You should select one rectangle.");
+	}
+
+}
