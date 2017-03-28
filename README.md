@@ -5,19 +5,30 @@
 ## How it works
 ![Gif more than thousand words](/how-to.gif)
 
-##Order
+## Installation
+1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
+2. Double click on Sketch `sparkliner.sketchplugin`.
+
+## Usage
 1. **Create an artboard**;
 2. Create a start rectangle. It sets sizes of a future sparkline graph;
-3. Start command from menu or press shortcuts `ctrl + shift + g `;
-4. Find and import your JSON file;
-5. Get sparkline.
+3. Select a command from menu or press a shortcut;
+4. Enter/import your data;
+5. Get a sparkline.
 
-## How install the plugin
-1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
-2. Copy the contents to the Plugin Folder (Plugin > Manage Plugins... > [Show Plugins Folder](http://frolovoleg.ru/images/sketch-plugin-folder.png)).
+## Ways to create a sparkline
+### Random
+#### One
+#### Two
+#### Three
+#### Four
+### Enter data
+### Import JSON
 
-## What do you need first
-Sparkliner creates graph with JSON data. First your need have it. It looks like that (example.json):
+## How to use JSON
+A Sparkliner can create a graph with JSON data. At the first, your need to have it.
+
+### How it looks
 
 ``` json
 {
@@ -32,7 +43,7 @@ Sparkliner creates graph with JSON data. First your need have it. It looks like 
 ```
 Open the file in your favorite editor and change the values of the names how you need (e.g. `"strokeColor" ` is a name. `"#00AAFF"` is its a value. Together they are a pair). Or create new one.
 
-## What are they
+### What they are
 
 ``` "dataArray" ```
 Data is an array. It defines a graph curve. Only numbers.
