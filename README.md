@@ -54,3 +54,6 @@ Radius of end marker. Only one number.
 
 ``` "removeInitialBox" ```
 It is start rectangle that set sizes of sparkline graph. By default plugin removes it. If you need it you can set false.
+
+## Links
+[Linkedin](https://www.linkedin.com/in/oleg-frolov-6a6a4752/) | [Dribbble](https://dribbble.com/Volorf) | [Facebook](https://www.facebook.com/volorf)
