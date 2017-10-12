@@ -1,23 +1,23 @@
-# Sparkliner — easy way to make sparkline graph
+# Sparkliner — an easy way to create sparkline graphs
 > A sparkline is a very small line chart, typically drawn without axes or coordinates. It presents the general shape of the variation (typically over time) in some measurement, such as temperature or stock market price, in a simple and highly condensed way.
 > - [Wikipedia](https://en.wikipedia.org/wiki/Sparkline).
 
 ## How it works
 ![Gif more than thousand words](/how-to.gif)
 
-##Order
+## How to use it
 1. **Create an artboard**;
 2. Create a start rectangle. It sets sizes of a future sparkline graph;
-3. Start command from menu or press shortcuts `ctrl + shift + g `;
+3. Access the **Sparkliner** plugin from Plugins menu or through the shortcut- `ctrl + shift + g `;
 4. Find and import your JSON file;
 5. Get sparkline.
 
-## How install the plugin
+## How to install the plugin
 1. [Download the zip file with the Sparkliner](https://github.com/Volorf/Sparkliner/archive/master.zip).
 2. Copy the contents to the Plugin Folder (Plugin > Manage Plugins... > [Show Plugins Folder](http://frolovoleg.ru/images/sketch-plugin-folder.png)).
 
 ## What do you need first
-Sparkliner creates graph with JSON data. First your need have it. It looks like that (example.json):
+Sparkliner creates graph with JSON data. First your need to have it. It looks like this (example.json):
 
 ``` json
 {
