@@ -5,7 +5,7 @@
 ## How it works
 ![Gif more than thousand words](/how-to.gif)
 
-##Order
+## Order
 1. **Create an artboard**;
 2. Create a start rectangle. It sets sizes of a future sparkline graph;
 3. Start command from menu or press shortcuts `ctrl + shift + g `;
